@@ -20,6 +20,7 @@ h6 {
     color: rgb(143, 143, 143);
     margin-top: 0; 
     margin-bottom: 0;
+    line-height: 2.5vmax;
 }
 
 .contact a:link {

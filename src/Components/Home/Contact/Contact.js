@@ -11,7 +11,7 @@ class Contact extends Component {
             <div className="contact">
                 <h6>COORDONNÉES</h6>
                 <p>10 rue de Charonne
-                    <br/>75011 Paris</p>
+                    <br className="contactLineJump"/>75011 Paris</p>
                 <a href="mailto:contact@release.studio">contact@release.studio</a>
                 <a href="tel:+33647096876">+33 6 47 09 68 76</a>
             </div>
