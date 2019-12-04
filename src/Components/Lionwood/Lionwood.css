@@ -13,16 +13,20 @@
     object-fit: cover;
 }
 
+.Lionwood .text {
+    max-width: 90vw;
+    margin: 2vh 0;
+}
+
 .Lionwood .text p{
     text-align: center;
     font-family: "Avenir light";
     font-size: 1.7vmax;
-    max-width: 90vw;
 }
 
 .SoundCloud{
     width: 70%;
-    height: 60vmax;
+    height: 60vh;
     max-height: 550px;
 }
 
@@ -34,9 +38,13 @@
 @media only screen and (max-width: 700px) {
     .SoundCloud{
         width: 90%;
+        height: 450px;
     }
     .PlatformLinks a img{
         width: 45vw;
         margin: 10px 1vw;
+    }
+    .Lionwood .text {
+        min-height: fit-content;
     }
   }

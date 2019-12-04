@@ -10,21 +10,30 @@
 }
 
 .Article {
+    align-self: center;
+    padding: 1vmax;
     display: grid;
     grid-template: auto auto / auto auto;
-    margin: 1.9vw 13vw;
+    margin: 1.9vw 0;
+    width: 90vw;
+    box-shadow: 0 0 10px 10px rgba(240, 240, 240, 0.74);
+    transition: 0.8s;
+}
+
+.Article:hover {
+    box-shadow: 0 0 10px 10px rgba(212, 212, 212, 0.795);
+    transition: 0.8s;
 }
 
 .Article h3{
+    /* border: 1px solid red; */
     grid-area: 1 / 1 / span 1 / span 2;
-    font-family: "Avenir light";
     text-transform: uppercase;
     font-family: "Work Sans";
     font-weight: 700; 
     color: black;
     font-size: 2vmax;
-    padding: 0;
-    margin: 1vh 0;
+    margin: 0 0 1vmax 0;
 }
 
 .video{
@@ -39,31 +48,29 @@
     justify-self: center;
     align-self: center;
     padding-left: 1vw;
-    text-align: left;
-    font-family: "Avenir light";
-    font-size: 1.4vmax;
 }
-.text p{
-    margin: 2px 0;
+.text p {
+    font-size: 1.4vmax;
+    font-family: "Avenir light";
+    text-align: left;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 900px) {
     .Article {
         grid-template: auto auto / auto auto auto;
-        margin: 2vw 8vw;
     }
     .Article h3{
         margin: 1vh 0;
     }
     .video{
         grid-area: 2 / 1 / span 1 / span 2;
-        width: 84vw;
-        height: 45vw;
+        width: 90vw;
+        height: 50vw;
     }
     .text{
         grid-area: 3 / 1 / span 1 / span 2;
         padding-left: 0;
+        padding-top: 1vh;
 
     }
-
   }

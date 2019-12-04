@@ -15,11 +15,13 @@ class Lionwood extends Component {
                 </div>
 
                 <div className="text">
+                    
                     <p>Découvrez le compositeur derrière le son de Release Studio.
                     <br/>Une musique qui mêle audace, sensibilité et puissance, voilà peut-être l’ambition de sa musique.
                     <br/>Des subtiles textures atmosphériques aux épiques percées électroniques, sa musique tantôt grandiose,
                     <br/>tantôt intime, nous surprenant pour mieux nous apaiser.
                     </p>
+
                 </div>
 
                 <iframe title="soundcloud" className="SoundCloud" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/370141379&color=%23f59e79&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>

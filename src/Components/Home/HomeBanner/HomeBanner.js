@@ -11,7 +11,7 @@ class HomeBanner extends Component {
         return (
             <div className="HomeBanner">
                 <video autoPlay muted preload="yes" loop playsInline>
-                    <source src={require('../../../images/video_musique.mp4')} type="video/mp4" />
+                    <source src={require('./video_musique.mp4')} type="video/mp4" />
                 </video>
                 <div className="layer">
                     <div className="textoverlay">

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Colaborations.css';
+import './Collaborations.css';
 
-class Colaborations extends Component {
+class Collaborations extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -15,9 +15,9 @@ class Colaborations extends Component {
                     <div className="text">
                         <p>Composition de musique originale et création du sound design pour la sortie de la nouvelle gamme performance de Renault Sport.<br/>
                             <br/>
-                            Réalisation vidéo : http://www.zystudio.fr<br/>
-                            Agence de communication : https://makheia.com<br/>
-                            Marque : https://shop.renaultsport.com/RSperformance/
+                            Réalisation vidéo : www.zystudio.fr<br/>
+                            Agence de communication : www.makheia.com<br/>
+                            Marque : www.shop.renaultsport.com/
                         </p>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ class Colaborations extends Component {
                     <iframe title="Acer" className="video" src="https://www.youtube.com/embed/ZK4e--v2kaI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div className="text">
                         <p>
-                            Composition d'une musique originale pour ce spot TV présentant l'ordinateur Acer Swift 3.
+                            Composition d'une musique originale pour ce spot TV présentant l'ordinateur Acer Swift 3. Diffusion nationale sur toutes chaines historiques et TNT
                             <br/>
                             <br/>
                             Réalisation film et 3D Agence moonrise.
@@ -42,13 +42,14 @@ class Colaborations extends Component {
                     <iframe title="Mugler" className="video" src="https://www.youtube.com/embed/y_PoyoQ2iYg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div className="text">
                         <p>
-                            Création de musique originale et Sound Design Surround. À l'occasion du lancement de son nouveau parfum Aura, la marque Mugler a choisi de faire découvrir son univers dans une expérience immersive exceptionnelle.
+                            Création de musique originale et Sound Design Surround. 
+                            À l'occasion du lancement de son nouveau parfum Aura, la marque Mugler a choisi de faire découvrir son univers dans une expérience immersive exceptionnelle.
                             <br/><br/>
                             Réalisation agence Luxmodernis.
                             <br/>
-                            http://www.mugler.fr
+                            www.mugler.fr
                             <br/>
-                            https://www.luxmodernis.com
+                            www.luxmodernis.com
                         </p>
                     </div>
                 </div>
@@ -88,7 +89,7 @@ class Colaborations extends Component {
                     <div className="text">
                         <p>                            
                             Le Groupe ENGIE vous présente ses meilleurs voeux 2018.
-                            Acteur mondial de l’énergie et expert dans 3 métiers : l’électricité, le gaz naturel et les services à l’énergie. Le Groupe inscrit la croissance responsable au cœur de ses métiers pour relever les grands enjeux de la transition énergétique vers une économie sobre en carbone : l’accès à une énergie durable, l’atténuation et l’adaptation au changement climatique, la sécurité d’approvisionnement et l’utilisation raisonnée des ressources.
+                            Le Groupe inscrit la croissance responsable au cœur de ses métiers pour relever les grands enjeux de la transition énergétique.
                             <br/><br/>
                             Réalisation Vidéo: Moonrise
                             <br/>
@@ -103,7 +104,7 @@ class Colaborations extends Component {
                     <iframe title="Sanofi" className="video" src="https://www.youtube.com/embed/5X6JF8F8Hrw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div className="text">
                         <p>
-                            Le Groupe Sanofi a créé la Fondation Sanofi Espoir en octobre 2010, pour capitaliser plus de 20 années d'engagement de solidarité nationale et internationale.Sa mission est de contribuer à réduire les inégalités en santé et la pauvreté auprès des populations les plus démunies.
+                            Le Groupe Sanofi a créé la Fondation Sanofi Espoir en octobre 2010, pour capitaliser plus de 20 années d'engagement de solidarité nationale et internationale.
                             <br/><br/>
                             Production vidéo:imageo
                             <br/>
@@ -144,7 +145,6 @@ class Colaborations extends Component {
                     <div className="text">
                         <p>
                             Composition de musique originale et Sound Design pour cette campagne de prévention.
-                            <br/>
                             Texte et Rap de l'artiste Dinamita appelé par l'association pour prêter sa voix et ses mots sans détours sur ce sujet sensible.
                             <br/><br/>
                             Réalisation Agence imageo
@@ -176,7 +176,8 @@ class Colaborations extends Component {
                     <div className="text">
                         <p>
                             Release Studio est partenaire de TEDx Celsa organisé chez nos amis de Google France.
-                            <br/>Nous avons permis l'utilisation de notre catalogue pour ces 2 vidéos de promotions de l'évenement.
+                            <br/>le CELSA (Haute École des Sciences de l'Information et de la Communication) s’est lancé dans un projet ambitieux : l’organisation d’une conférence TEDx. L’objectif est à la fois de créer un événement fédérateur autour du partage d’idées et d’expériences inspirantes et de valoriser l’école à travers ses alumni.
+                            <br/>www.tedxcelsa.com
                         </p>
                     </div>
                 </div>
@@ -186,4 +187,4 @@ class Colaborations extends Component {
     }
 }
  
-export default Colaborations;
+export default Collaborations;

@@ -4,7 +4,7 @@ import './App.css';
 import Nav from './Components/Nav/Nav';
 import Home from './Components/Home/Home';
 import Lionwood from './Components/Lionwood/Lionwood';
-import Colaborations from './Components/Colaborations/Colaborations'
+import Collaborations from './Components/Collaborations/Collaborations'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/Lionwood" component={Lionwood} />
-          <Route path="/Colaborations" component={Colaborations} />
+          <Route path="/Collaborations" component={Collaborations} />
         </Switch>
       </BrowserRouter>
       
