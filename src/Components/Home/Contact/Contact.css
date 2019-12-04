@@ -1,0 +1,89 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1vmax;
+}
+h6 {
+    font-size: 1.9vmax;
+    font-weight: 400;
+    font-family: "Avenir light";
+    margin: 1vmax;
+}
+
+.contact p {
+    text-align: center;
+    font-family: "Avenir light";
+    font-size: 1.5vmax;
+    font-weight: 100;
+    line-height: 230%;
+    color: rgb(143, 143, 143);
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+.contact a:link {
+    text-decoration: none;
+    font-family: "Avenir light";
+    font-size: 1.5vmax;
+    font-weight: 100;
+    line-height: 230%;
+    color: #ABABAB;
+    transition: 0.5s;
+  }
+  
+.contact a:visited {
+    text-decoration: none;
+    font-family: "Avenir light";
+    font-size: 1.5vmax;
+    font-weight: 100;
+    line-height: 230%;
+    color: #ABABAB;
+    transition: 0.5s;
+  }
+.contact a:hover {
+    text-decoration: none;
+    font-family: "Avenir light";
+    font-size: 1.5vmax;
+    font-weight: 100;
+    line-height: 230%;
+    color: rgb(105, 105, 105);
+    text-shadow: 0 0 5 5 rgb(88, 88, 88);
+    transition: 0.5s;
+  }
+  
+.contact a:active {
+    text-decoration: none;
+    font-family: "Avenir light";
+    font-size: 1.5vmax;
+    font-weight: 100;
+    line-height: 230%;
+    color: #ABABAB;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 520px) {
+  h6 {
+    font-size: 2.9vmax;
+}
+
+.contact p {
+  font-size: 2vmax;
+}
+
+.contact a:link {
+  font-size: 2vmax;
+}
+  
+.contact a:visited {
+  font-size: 2vmax;
+  }
+.contact a:hover {
+  font-size: 2vmax;
+}
+  
+.contact a:active {
+  font-size: 2vmax;
+
+}
+}

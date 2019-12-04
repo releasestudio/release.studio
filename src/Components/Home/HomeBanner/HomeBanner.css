@@ -1,0 +1,69 @@
+video{
+    min-width: 100%;
+    align-self: center;
+
+}
+.HomeBanner{
+    display: flex;
+    height: 35vmax;
+    overflow-y: hidden;
+}
+.layer{
+    position:absolute;
+    z-index:5;
+    background-color: rgba(138, 138, 138, 0.356);
+    width: 100%;
+    height: 35vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textoverlay h3 {
+    font-family: "Lulo Clean";
+    text-transform: uppercase;
+    font-family: "Work Sans";
+    font-weight: 700; 
+    color: white;
+    text-justify: center;
+    text-align: center;
+    font-size: 3.2vmax;
+}
+.textoverlay h4 {
+    text-justify: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 40px rgb(168, 168, 168);
+    font-weight: 450;
+    font-size: 2.3vmax;
+    font-family: "Avenir light";
+    margin: 1vmax;
+}
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vmax;
+
+}
+#play {
+    display: inline-block;
+    margin-right: 30px;
+    width: 7vmax;
+    height: 7vmax;
+}
+.fadein {
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+}
+@media only screen and (max-width: 520px) {
+    video{
+        align-self: center;
+        object-fit: cover;
+    
+    }
+    .HomeBanner{
+        display: flex;
+        overflow-y: hidden;
+    }
+  }
