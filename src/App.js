@@ -12,7 +12,7 @@ export default function App(props){
     return (
       <div className="App">
           <BrowserRouter>
-            <UserContext.Provider value="Eng">
+            <UserContext.Provider value="fr">
               <Nav />
               <Switch>
                 <Route path="/" component={Home} exact />
