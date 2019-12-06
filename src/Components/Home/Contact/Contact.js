@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import './Contact.css';
-import UserContext from '../../../LanguageContext';
+import {ContextLanguage} from '../../../UserContext';
 
 export default function Contact(props){
-    const [language] = useState(useContext(UserContext));
+    const {language} = useContext(ContextLanguage);
 
     function textContact(){
         if(language === "fr"){
@@ -19,8 +19,6 @@ export default function Contact(props){
     return (
         <div className="contact">
             {textContact()}
-            <p>10 rue de Charonne
-                <br className="contactLineJump"/>75011 Paris</p>
             <a href="mailto:contact@release.studio">contact@release.studio</a>
             <a href="tel:+33647096876">+33 6 47 09 68 76</a>
         </div>

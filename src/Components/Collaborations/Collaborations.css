@@ -56,6 +56,7 @@
     font-size: 1.4vmax;
     font-family: "Avenir light";
     text-align: left;
+    white-space: pre-wrap;
 }
 
 @media only screen and (max-width: 900px) {

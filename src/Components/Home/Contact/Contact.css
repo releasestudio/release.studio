@@ -11,18 +11,6 @@ h6 {
     margin: 1vmax;
 }
 
-.contact p {
-    text-align: center;
-    font-family: "Avenir light";
-    font-size: 1.5vmax;
-    font-weight: 100;
-    line-height: 230%;
-    color: rgb(143, 143, 143);
-    margin-top: 0; 
-    margin-bottom: 0;
-    line-height: 2.5vmax;
-}
-
 .contact a:link {
     text-decoration: none;
     font-family: "Avenir light";
@@ -66,10 +54,6 @@ h6 {
 @media only screen and (max-width: 520px) {
   h6 {
     font-size: 2.9vmax;
-}
-
-.contact p {
-  font-size: 2vmax;
 }
 
 .contact a:link {

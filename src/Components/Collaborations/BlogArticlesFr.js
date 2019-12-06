@@ -1,40 +1,31 @@
 export const BlogArticlesFr = [
-    // {
-    //     name: "title",
-    //     url: "url",
-    //     text1: ``,
-    //     text2: ``,
-    //     text3: ``,
-    //     text4: ``,
-    //     text5: ``,
-    //     text6: ``,
-    // },    
     {
         name: "Renault Sport Performance",
         url: "https://www.youtube.com/embed/xelNJF1D3Z0",
-        text1: "Composition de musique originale et création du sound design pour la sortie de la nouvelle gamme performance de Renault Sport.",
-        text2: "",
-        text3: "Réalisation vidéo : www.zystudio.fr",
-        text4: "Agence de communication : www.makheia.com",
-        text5: "www.shop.renaultsport.com",
+        text: `Composition de musique originale et création du sound design pour la sortie de la nouvelle gamme performance de Renault Sport.
+
+Réalisation vidéo : www.zystudio.fr
+Agence de communication : www.makheia.com
+www.shop.renaultsport.com`,
     },
     {
         name: "Mugler - Aura Experience 360°",
         url: "https://www.youtube.com/embed/y_PoyoQ2iYg",
-        text1: `Création de musique originale et Sound Design Surround. 
-        À l'occasion du lancement de son nouveau parfum Aura, la marque Mugler a choisi de faire découvrir son univers dans une expérience immersive exceptionnelle.`,
-        text2: "",
-        text3: "Réalisation agence Luxmodernis.",
-        text4: "www.mugler.fr",
-        text5: "www.luxmodernis.com",
+        text: `Création de musique originale et Sound Design Surround. 
+À l'occasion du lancement de son nouveau parfum Aura, la marque Mugler a choisi de faire découvrir son univers dans une expérience immersive exceptionnelle.
+
+Réalisation agence Luxmodernis.
+www.mugler.fr
+www.luxmodernis.com`,
     },
     {
         name: "Laser Game Evolution - Battle of Astaros",
         url: "https://www.youtube.com/embed/DmiZaT4w69k",
-        text1: `Création de trois musiques originales pour le nouveau jeu d'arcade de la franchise Laser Game Evolution. Deux équipes s'affrontent dans une aventure intergalactique qui leur reserve son lot d'adrenaline.`,
-        text2: ``,
-        text3: `Realisation Agence Moonrise`,
-        text4: `www.moonrise.fr`,
+        text: `
+Création de trois musiques originales pour le nouveau jeu d'arcade de la franchise Laser Game Evolution. Deux équipes s'affrontent dans une aventure intergalactique qui leur reserve son lot d'adrenaline.
+
+Realisation Agence Moonrise
+www.moonrise.fr`,
     },
     {
         name: "Picard Noel 2017",

@@ -1,0 +1,57 @@
+.NarrowHeader {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5.7vmax;
+    background-color: rgba(255, 255, 255, 0.959);
+    box-shadow: 0 3px 5px 1px #00000063;
+}
+.NarrowHeader .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vmax;
+} 
+.NarrowHeader img {
+    padding-top: 0.3vmax;
+    width: auto;
+    height: 4.5vmax;
+    justify-self: left;
+
+}
+.narrowNav {
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.narrowNav a {
+    display: inline-block;
+    font-family: "Avenir light";
+    font-size: 1.7vmax;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding-right: 3vw;
+    transition: 0.5s;
+}
+.narrowNav a:hover {
+    color: rgb(78, 78, 78);
+    transition: 0.3s;
+}
+
+.narrowNav h5{
+    display: inline-block;
+    font-family: "Avenir light";
+    padding-right: 3vw;
+    width: 1.2vmax;
+    font-size: 1.4vmax;
+}
+
+.narrowNav h5:hover{
+    color: rgb(56, 56, 56);
+    text-shadow: 0 0 5px 5px rgb(102, 102, 102);
+    cursor: pointer;
+}
