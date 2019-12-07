@@ -5,9 +5,12 @@ import Article from '../BlogPage/Article';
 import {LanguageContext} from '../../LanguageContext';
 import Blog from '../BlogPage/Blog';
 import BlogCreateBox from './BlogCreateBox';
+import {UserContext} from '../../UserContext';
+import Login from './Login'
 
 export default function BlogEditPage(props){
     const {language} = useContext(LanguageContext);
+    const {currentUser} = useContext(UserContext);
     const [frTitle, setFrTitle] = useState();
     const [enTitle, setEnTitle] = useState();
     const [url, setUrl] = useState();
@@ -48,25 +51,35 @@ export default function BlogEditPage(props){
     }
     
     function newArticle(){
-        if(frTitle || enTitle || url || frText || enText && language === "fr"){
+        if((frTitle || enTitle || url || frText || enText) && (language === "fr")){
             return <Article title={frTitle} url={url} text={frText} />
-        }else if(frTitle || enTitle || url || frText || enText && language === "en"){
+        }else if((frTitle || enTitle || url || frText || enText) && (language === "en")){
             return <Article title={enTitle} url={url} text={enText} />
         }
     }
+
+    function loginOrEdit(){
+        if(currentUser){
+            return (
+                <div className="BlogEditPage">
+                    <BlogCreateBox frTitle={frTitle} enTitle={enTitle} url={url} frText={frText} enText={enText} 
+                    handleFrTitleChange={handleFrTitleChange} handleEnTitleChange={handleEnTitleChange} handleUrlChange={handleUrlChange} 
+                    handleFrTextChange={handleFrTextChange} handleEnTextChange={handleEnTextChange} 
+                    saveToDatabase={saveToDatabase} />
+                    
+                    {newArticle()}
+        
+                    <Blog />
+        
+                </div>
+            )
+        }
+        return <Login />
+    }
+
     return (
-
-
-        <div className="BlogEditPage">
-            <BlogCreateBox frTitle={frTitle} enTitle={enTitle} url={url} frText={frText} enText={enText} 
-            handleFrTitleChange={handleFrTitleChange} handleEnTitleChange={handleEnTitleChange} handleUrlChange={handleUrlChange} 
-            handleFrTextChange={handleFrTextChange} handleEnTextChange={handleEnTextChange} 
-            saveToDatabase={saveToDatabase} />
-            
-           {newArticle()}
-
-           <Blog />
-
+        <div>
+            {loginOrEdit()}
         </div>
     );
 

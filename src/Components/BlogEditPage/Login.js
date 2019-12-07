@@ -2,8 +2,11 @@ import React, {useCallback, useContext} from 'react';
 import {withRouter, Redirect} from 'react-router';
 import firebase from '../../firebase';
 import {UserContext} from '../../UserContext';
+import './Login.css';
 
-const Login = ({  history }) => {
+export default function Login(){
+    const { currentUser } = useContext(UserContext);
+
     const handleLogin = useCallback(
         async event => {
             event.preventDefault();
@@ -12,36 +15,29 @@ const Login = ({  history }) => {
                 await firebase
                     .auth()
                     .signInWithEmailAndPassword(email.value, password.value);
-                history.push("/");
             } catch (error) {
                 alert(error);
             }
         },
-        [history]
+        []
     );
 
-    const { currentUser } = useContext(UserContext)
-
-    if (currentUser) {
-        return <Redirect to="/blogcreate" />
-    }
-
     return (
-        <div className="LoginModule">
-            <h1>Log in</h1>
-            <form onSubmit={handleLogin}>
-                <label>
-                    Email 
-                    <input name="email" type="email" placeholder="Email" />
-                </label>
-                <lable>
-                    Password 
-                    <input name="password" type="password" placeholder="Password" />
-                </lable>
-                <button type="submit">Log in</button>
-            </form>
+        <div className="LoginPage">
+            <div className="LoginModule">
+                <h1>Log in</h1>
+                <form onSubmit={handleLogin}>
+                    <label>
+                        Email 
+                        <input name="email" type="email" placeholder="Email" />
+                    </label>
+                    <lable>
+                        Password 
+                        <input name="password" type="password" placeholder="Password" />
+                    </lable>
+                    <button type="submit">Log in</button>
+                </form>
+            </div>
         </div>
     );
 };
-
-export default withRouter(Login);
