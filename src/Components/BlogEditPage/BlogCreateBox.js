@@ -6,7 +6,10 @@ export default function BlogCreateBox(props){
     return (
             <div className="CreateArticleBox">
                 <h3>Créer un Article</h3>
-                <button onClick={props.saveToDatabase}>Enregistrer</button>
+                <div className="ButtonBox">
+                    <button onClick={props.saveToDatabase}>Enregistrer</button>
+                    <button onClick={props.logOut}>Log out</button>
+                </div>
                 <textarea onChange={props.handleFrTitleChange} value={props.frTitle} type="text" name="setFrTitre" className="frTitre" placeholder="Titre Francais"/>
                 <textarea onChange={props.handleEnTitleChange} value={props.enTitle} type="text" name="setEnTitre" className="enTitre" placeholder="Titre Anglais"/>
                 <textarea onChange={props.handleUrlChange} value={props.url} type="text" name="setUrl" className="url" placeholder="Embeded url" />

@@ -1,9 +1,10 @@
 .CreateArticleBox{
-    /* border: 1px solid red; */
     align-self: center;
     padding: 1vmax;
     display: grid;
     grid-template: auto auto auto auto /  auto auto;
+    justify-items: center;
+    align-content: center;
     margin: 1.9vw 0;
     width: 90vw;
     box-shadow: 0 0 10px 10px rgba(240, 240, 240, 0.74);
@@ -18,11 +19,18 @@
     color: black;
     font-size: 2vmax;
     margin: 0 0 1vmax 0;
+    width: 100%;
+}
+
+.CreateArticleBox .ButtonBox{
+    /* border: 1px solid red; */
+    text-align: right;
+    grid-area: 1 / 2 / span 1 / span 1;
+    width: 100%;
 }
 
 .CreateArticleBox button{
-    justify-self: center;
-    text-align: center;
+    margin-left: 3vw;
     text-justify: center;
     width: 9vmax;
     height: 2.1vmax;
@@ -34,14 +42,14 @@
 .CreateArticleBox textarea{
     resize: none;
     border: 1px solid gray;
-    margin: 1px
+    margin: 1px;
+    width: 100%;
 }
 
 .frTitre, .enTitre{
     text-transform: uppercase;
     font-family: "Work Sans";
-    font-weight: 700; 
-    color: black;
+    font-weight: 700;
     font-size: 2vmax;
     height: 3vmax;
 }
@@ -65,19 +73,19 @@
     .CreateArticleBox{
         grid-template: auto auto auto auto auto auto /  auto auto;
     }
-    .frTitre{
+    .CreateArticleBox .frTitre{
         grid-area: 2 / 1 / span 1 / span 2;
     }
-    .enTitre{
+    .CreateArticleBox .enTitre{
         grid-area: 3 / 1 / span 1 / span 2;
     }
-    .url{
+    .CreateArticleBox .url{
         grid-area: 4 / 1 / span 1 / span 2;
     }
-    .frTexte{
+    .CreateArticleBox .frTexte{
         grid-area: 5 / 1 / span 1 / span 2;
     }
-    .enTexte{
+    .CreateArticleBox .enTexte{
         grid-area: 6 / 1 / span 1 / span 2;
     }
 }

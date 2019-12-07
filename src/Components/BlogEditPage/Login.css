@@ -10,10 +10,51 @@
 
 .LoginModule{
     align-self: center;
-    padding: auto auto;
+    display: grid;
+    grid-template-areas: auto / auto auto;
+    justify-content: center;
+    text-align: center;
     padding: 1vmax;
     margin: 1.9vw 0;
     width: 90vw;
     box-shadow: 0 0 10px 10px rgba(240, 240, 240, 0.74);
     transition: 0.8s;
+}
+
+.LoginModule h1 {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "Work Sans";
+    font-weight: 700; 
+    color: black;
+    font-size: 2vmax;
+}
+
+.LoginModule form {
+    font-family: "Avenir light";
+    font-size: 1.7vmax;
+    display: block;
+    width: 100%;
+}
+
+.LoginModule input {
+    margin: 0.5vmax;
+    display: block;
+    border: 1px solid gray;
+    font-size: 1.4vmax;
+    font-family: "Avenir light";
+    width: 20vw;
+    text-align: center;
+}
+
+.LoginModule button {
+    box-shadow: 0 0 3px rgb(219, 219, 219);
+    font-size: 2vmax;
+    width: 9vmax;
+    height: 2.1vmax;
+    border-radius: 2vmax;
+    font-family: "Work Sans";
+    font-size: 1.3vmax;
+    margin: 2vh 0;
 }

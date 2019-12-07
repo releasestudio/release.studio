@@ -16,6 +16,7 @@ export default function BlogEditPage(props){
     const [url, setUrl] = useState();
     const [frText, setFrText] = useState();
     const [enText, setEnText] = useState();
+    const [reload, setReload] = useState(false);
 
     function handleFrTitleChange(e){
         setFrTitle(e.target.value);
@@ -34,6 +35,7 @@ export default function BlogEditPage(props){
     }
 
     function saveToDatabase(){
+        if(frTitle && enTitle && url && frText && enText){
         firebase.firestore().collection('articles').add({
             "date": Date.now(),
             "frTitle": frTitle,
@@ -47,14 +49,17 @@ export default function BlogEditPage(props){
         setUrl("");
         setFrText("");
         setEnText("");
-        // window.location.href = 'https://release.studio/Collaborations'
+        setReload(reload + 1);
+        }else{
+            alert("Missing a field!")
+        }
     }
     
     function newArticle(){
         if((frTitle || enTitle || url || frText || enText) && (language === "fr")){
-            return <Article title={frTitle} url={url} text={frText} />
+            return <Article style={{ backgroundColor: "rgba(228, 255, 230, 0.473)" }} title={frTitle} url={url} text={frText} />
         }else if((frTitle || enTitle || url || frText || enText) && (language === "en")){
-            return <Article title={enTitle} url={url} text={enText} />
+            return <Article style={{ backgroundColor: "rgba(228, 255, 230, 0.473)" }} title={enTitle} url={url} text={enText} />
         }
     }
 
@@ -69,7 +74,7 @@ export default function BlogEditPage(props){
                     
                     {newArticle()}
         
-                    <Blog />
+                    <Blog key={reload} setReload={setReload} />
         
                 </div>
             )
