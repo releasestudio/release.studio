@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react';
 import './BlogCreate.css';
-import '../Collaborations/Collaborations.css'
 import firebase from '../../firebase';
 import Article from '../Collaborations/Article';
-import {ContextLanguage}from '../../UserContext';
+import {LanguageContext}from '../../LanguageContext';
 
 export default function Collaborations(props){
-    const {language} = useContext(ContextLanguage);
+    const {language} = useContext(LanguageContext);
     const [frTitle, setFrTitle] = useState();
     const [enTitle, setEnTitle] = useState();
     const [url, setUrl] = useState();
@@ -37,8 +36,13 @@ export default function Collaborations(props){
             "url": url,
             "frText": frText,
             "enText": enText
-          });
-
+        });
+        setFrTitle("");
+        setEnTitle("");
+        setUrl("");
+        setFrText("");
+        setEnText("");
+        // window.location.href = 'https://release.studio/Collaborations'
     }
     return (
 
@@ -47,14 +51,14 @@ export default function Collaborations(props){
             <div className="CreateArticle">
                 <h3>Créer un Article</h3>
                 <button onClick={saveToDatabase}>Enregistrer</button>
-                <textarea onChange={handleFrTitleChange} type="text" name="setFrTitre" className="frTitre" placeholder="Titre Francais"/>
-                <textarea onChange={handleEnTitleChange} type="text" name="setEnTitre" className="enTitre" placeholder="Titre Anglais"/>
-                <textarea onChange={handleUrlChange} type="text" name="setUrl" className="url" placeholder="Embeded url" />
-                <textarea onChange={handleFrTextChange} type="setText" name="frTexte" className="frTexte" placeholder="Texte Français" />
-                <textarea onChange={handleEnTextChange} type="setext" name="enTexte" className="enTexte" placeholder="Texte Anglais" />
+                <textarea onChange={handleFrTitleChange} value={frTitle} type="text" name="setFrTitre" className="frTitre" placeholder="Titre Francais"/>
+                <textarea onChange={handleEnTitleChange} value={enTitle} type="text" name="setEnTitre" className="enTitre" placeholder="Titre Anglais"/>
+                <textarea onChange={handleUrlChange} value={url} type="text" name="setUrl" className="url" placeholder="Embeded url" />
+                <textarea onChange={handleFrTextChange} value={frText} type="setText" name="frTexte" className="frTexte" placeholder="Texte Français" />
+                <textarea onChange={handleEnTextChange} value={enText} type="setext" name="enTexte" className="enTexte" placeholder="Texte Anglais" />
             </div>
             
-            {language === "fr" ? <Article name={frTitle} url={url} text={frText} /> : <Article name={enTitle} url={url} text={enText} />}
+            {language === "fr" ? <Article title={frTitle} url={url} text={frText} /> : <Article title={enTitle} url={url} text={enText} />}
         </div>
     );
 

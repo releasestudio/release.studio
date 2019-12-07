@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import './Contact.css';
-import {ContextLanguage} from '../../../UserContext';
+import {LanguageContext}from '../../../LanguageContext';
 
 export default function Contact(props){
-    const {language} = useContext(ContextLanguage);
+    const {language} = useContext(LanguageContext);
 
     function textContact(){
         if(language === "fr"){

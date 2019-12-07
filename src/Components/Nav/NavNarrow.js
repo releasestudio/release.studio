@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import {NavLink} from "react-router-dom";
 import './NavNarrow.css';
-import {ContextLanguage} from '../../UserContext';
+import {LanguageContext} from '../../LanguageContext';
 
 export default function NavNarrow(props){
-    const {language, setLanguage} = useContext(ContextLanguage);
+    const {language, setLanguage} = useContext(LanguageContext);
 
     function toggleLanguage(){
         return language === "fr" ? setLanguage("en") : setLanguage("fr");
@@ -23,9 +23,9 @@ export default function NavNarrow(props){
 
                 <div className="narrowNav">
 
-                    <NavLink to="/Lionwood" className="fadein">Lionwood</NavLink>
+                    <NavLink to="/Lionwood">Lionwood</NavLink>
 
-                    <NavLink to="/Collaborations" className="fadein">Collaborations</NavLink>
+                    <NavLink to="/Collaborations">Collaborations</NavLink>
 
                     <h5 onClick={() => toggleLanguage()}>{showOtherLanguage()}</h5>
 
