@@ -1,9 +1,9 @@
 import React, {useCallback, useContext} from 'react';
 import {withRouter, Redirect} from 'react-router';
 import firebase from '../../firebase';
-import {AuthContext} from './Auth';
+import {UserContext} from '../../UserContext';
 
-const login = ({  history }) => {
+const Login = ({  history }) => {
     const handleLogin = useCallback(
         async event => {
             event.preventDefault();
@@ -20,14 +20,14 @@ const login = ({  history }) => {
         [history]
     );
 
-    const { currentUser } = userContext(AuthContext)
+    const { currentUser } = useContext(UserContext)
 
     if (currentUser) {
-        return <Redirect to="/" />
+        return <Redirect to="/blogcreate" />
     }
 
     return (
-        <div>
+        <div className="LoginModule">
             <h1>Log in</h1>
             <form onSubmit={handleLogin}>
                 <label>

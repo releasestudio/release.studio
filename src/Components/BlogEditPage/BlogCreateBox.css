@@ -1,15 +1,5 @@
-.BlogEditPage{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-items: center;
-    margin:0;
-    padding-top: 5.9vmax;
-    padding-bottom: 1.7vmax;
-    width: 100%;
-}
-
-.CreateArticle{
+.CreateArticleBox{
+    /* border: 1px solid red; */
     align-self: center;
     padding: 1vmax;
     display: grid;
@@ -19,7 +9,7 @@
     box-shadow: 0 0 10px 10px rgba(240, 240, 240, 0.74);
     transition: 0.8s;
 }
-.CreateArticle h3{
+.CreateArticleBox h3{
     /* border: 1px solid red; */
     grid-area: 1 / 1 / span 1 / span 1;
     text-transform: uppercase;
@@ -30,7 +20,7 @@
     margin: 0 0 1vmax 0;
 }
 
-.CreateArticle button{
+.CreateArticleBox button{
     justify-self: center;
     text-align: center;
     text-justify: center;
@@ -41,7 +31,7 @@
     font-size: 1.3vmax;
 }
 
-.CreateArticle textarea{
+.CreateArticleBox textarea{
     resize: none;
     border: 1px solid gray;
     margin: 1px
@@ -56,7 +46,7 @@
     height: 3vmax;
 }
 
-.url{
+.CreateArticleBox .url{
     grid-area: 3 / 1 / span 1 / span 2;
     font-size: 1.2vmax;
     font-family: "Avenir light";
@@ -72,7 +62,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .CreateArticle{
+    .CreateArticleBox{
         grid-template: auto auto auto auto auto auto /  auto auto;
     }
     .frTitre{

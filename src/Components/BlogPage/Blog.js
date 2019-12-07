@@ -1,9 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
-import './Collaborations.css';
+import './Blog.css';
 import Article from './Article';
 import {LanguageContext} from '../../LanguageContext';
 import firebase from '../../firebase';
-import {NavLink} from "react-router-dom";
 
 function GetFirebaseData() {
     const [existingArticles, setExistingArticles] = useState([]);
@@ -25,11 +24,10 @@ function GetFirebaseData() {
                 setExistingArticles(articlesData);
             });
     }, [])
-
     return existingArticles; 
 }
 
-export default function Collaborations(props){
+export default function Blog(props){
     const {language} = useContext(LanguageContext);
 
     function renderBlog(){
@@ -50,7 +48,6 @@ export default function Collaborations(props){
             {
             renderBlog()
             }
-            <div className="footer"><NavLink to="/blogcreate" >Copyright © Release Studio {new Date().getFullYear()}</NavLink></div>
         </div>
     )
 }

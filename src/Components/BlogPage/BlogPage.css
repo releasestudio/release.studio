@@ -1,14 +1,7 @@
-.Blog{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-items: center;
-    margin:0;
+.BlogPage{
     padding-top: 5.9vmax;
-    padding-bottom: 0;
     width: 100%;
 }
-
 .footer{
     margin-top: 1.7vmax;
     background-color: rgb(243, 243, 243);
@@ -23,5 +16,4 @@
     display: inline-block;
     font-size: 0.8vmax;
     margin: auto;
-    padding: 0;
 }

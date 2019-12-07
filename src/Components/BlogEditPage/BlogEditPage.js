@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
-import './BlogCreate.css';
+import './BlogEditPage.css';
 import firebase from '../../firebase';
-import Article from '../Collaborations/Article';
-import {LanguageContext}from '../../LanguageContext';
+import Article from '../BlogPage/Article';
+import {LanguageContext} from '../../LanguageContext';
+import Blog from '../BlogPage/Blog';
+import BlogCreateBox from './BlogCreateBox';
 
-export default function Collaborations(props){
+export default function BlogEditPage(props){
     const {language} = useContext(LanguageContext);
     const [frTitle, setFrTitle] = useState();
     const [enTitle, setEnTitle] = useState();
@@ -44,21 +46,27 @@ export default function Collaborations(props){
         setEnText("");
         // window.location.href = 'https://release.studio/Collaborations'
     }
+    
+    function newArticle(){
+        if(frTitle || enTitle || url || frText || enText && language === "fr"){
+            return <Article title={frTitle} url={url} text={frText} />
+        }else if(frTitle || enTitle || url || frText || enText && language === "en"){
+            return <Article title={enTitle} url={url} text={enText} />
+        }
+    }
     return (
 
 
         <div className="BlogEditPage">
-            <div className="CreateArticle">
-                <h3>Créer un Article</h3>
-                <button onClick={saveToDatabase}>Enregistrer</button>
-                <textarea onChange={handleFrTitleChange} value={frTitle} type="text" name="setFrTitre" className="frTitre" placeholder="Titre Francais"/>
-                <textarea onChange={handleEnTitleChange} value={enTitle} type="text" name="setEnTitre" className="enTitre" placeholder="Titre Anglais"/>
-                <textarea onChange={handleUrlChange} value={url} type="text" name="setUrl" className="url" placeholder="Embeded url" />
-                <textarea onChange={handleFrTextChange} value={frText} type="setText" name="frTexte" className="frTexte" placeholder="Texte Français" />
-                <textarea onChange={handleEnTextChange} value={enText} type="setext" name="enTexte" className="enTexte" placeholder="Texte Anglais" />
-            </div>
+            <BlogCreateBox frTitle={frTitle} enTitle={enTitle} url={url} frText={frText} enText={enText} 
+            handleFrTitleChange={handleFrTitleChange} handleEnTitleChange={handleEnTitleChange} handleUrlChange={handleUrlChange} 
+            handleFrTextChange={handleFrTextChange} handleEnTextChange={handleEnTextChange} 
+            saveToDatabase={saveToDatabase} />
             
-            {language === "fr" ? <Article title={frTitle} url={url} text={frText} /> : <Article title={enTitle} url={url} text={enText} />}
+           {newArticle()}
+
+           <Blog />
+
         </div>
     );
 

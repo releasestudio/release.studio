@@ -1,0 +1,9 @@
+.BlogEditPage{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    padding-top: 5.9vmax;
+    padding-bottom: 1.7vmax;
+    width: 100%;
+}

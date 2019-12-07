@@ -26,7 +26,7 @@ export default function NavLarge(props){
 
                     <NavLink to="/Lionwood">Lionwood</NavLink>
 
-                    <NavLink to="/Collaborations">Collaborations</NavLink>
+                    <NavLink to="/blogpage">Collaborations</NavLink>
 
                     <h5 className={frSelected()} onClick={() => setLanguage("fr")}>fr</h5>
                     

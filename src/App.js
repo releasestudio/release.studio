@@ -3,10 +3,10 @@ import {BrowserRouter, Switch, Route,} from 'react-router-dom';
 import './App.css';
 import NavLarge from './Components/Nav/NavLarge';
 import NavNarrow from './Components/Nav/NavNarrow';
-import BlogCreate from './Components/BlogCreate/BlogCreate'
+import BlogEditPage from './Components/BlogEditPage/BlogEditPage'
 import Home from './Components/Home/Home';
 import Lionwood from './Components/Lionwood/Lionwood';
-import Collaborations from './Components/Collaborations/Collaborations.js';
+import BlogPage from './Components/BlogPage/BlogPage.js';
 import {LanguageContextProvider} from './LanguageContext';
 import {UserContextProvider} from './UserContext';
 
@@ -35,8 +35,8 @@ export default function App(props){
                 <Switch>
                   <Route path="/" component={Home} exact />
                   <Route path="/lionwood" component={Lionwood} />
-                  <Route path="/collaborations" component={Collaborations} />
-                  <Route path="/blogcreate" component={BlogCreate} />
+                  <Route path="/blogpage" component={BlogPage} />
+                  <Route path="/blogeditpage" component={BlogEditPage} />
                 </Switch>
               </LanguageContextProvider>
             </UserContextProvider>
