@@ -7,10 +7,18 @@ export default function NavNarrow(props){
     const {language, setLanguage} = useContext(LanguageContext);
 
     function toggleLanguage(){
-        return language === "fr" ? setLanguage("en") : setLanguage("fr");
+        if(language === "fr"){
+            setLanguage("en");
+            localStorage.setItem('ReleaseStudioLanguage', 'en')
+        }else{
+            setLanguage("fr");
+            localStorage.setItem('ReleaseStudioLanguage', "fr");
+        }
     }
+
     function showOtherLanguage(){
         return language === "fr" ? "en" : "fr";
+        
     }
 
     return (

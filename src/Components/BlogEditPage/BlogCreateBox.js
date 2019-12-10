@@ -26,6 +26,7 @@ export default function BlogCreateBox(props){
                 break;
           }    
     }
+
     return (
             <div className="CreateArticleBox">
                 <h3>{props.modify? 'Edit' : 'Create'} Article</h3>

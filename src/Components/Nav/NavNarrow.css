@@ -30,7 +30,7 @@
 }
 .narrowNav a {
     display: inline-block;
-    font-family: "Avenir light";
+    font-family: 'Nunito', sans-serif;
     font-size: 1.7vmax;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -44,7 +44,7 @@
 
 .narrowNav h5{
     display: inline-block;
-    font-family: "Avenir light";
+    font-family: 'Nunito', sans-serif;
     padding-right: 3vw;
     width: 1.2vmax;
     font-size: 1.4vmax;

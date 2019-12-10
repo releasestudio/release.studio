@@ -18,7 +18,6 @@ export default function NavLarge(props){
         localStorage.setItem('ReleaseStudioLanguage', lgChoice)
     }
 
-
     return (
         <header>
             <div className="box">

@@ -1,14 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import './BlogEditPage.css';
 import firebase from '../../firebase';
 import Article from '../BlogPage/Article';
 import Blog from '../BlogPage/Blog';
 import BlogCreateBox from './BlogCreateBox';
-import {UserContext} from '../../UserContext';
 import Login from './Login'
 
 export default function BlogEditPage(props){
-    const {currentUser} = useContext(UserContext);
 
     const [newArticle, setNewArticle] = useState({})
 
@@ -55,7 +53,6 @@ export default function BlogEditPage(props){
     }
 
     function showEditArticle(article){
-        // setModify(true);
         setNewArticle({...newArticle,
             articleEdit: true,
             id: article.id,

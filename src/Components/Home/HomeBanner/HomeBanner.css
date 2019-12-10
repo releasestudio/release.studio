@@ -10,7 +10,7 @@ video{
 .layer{
     position:absolute;
     z-index:5;
-    background-color: rgba(138, 138, 138, 0.356);
+    background-color: rgba(138, 138, 138, 0.596);
     width: 100%;
     height: 35vmax;
     display: flex;
@@ -18,7 +18,6 @@ video{
     align-items: center;
 }
 .textoverlay h3 {
-    font-family: "Lulo Clean";
     text-transform: uppercase;
     font-family: "Work Sans";
     font-weight: 700; 
@@ -32,9 +31,9 @@ video{
     text-align: center;
     color: rgb(0, 0, 0);
     text-shadow: 0 0 40px rgb(168, 168, 168);
-    font-weight: 450;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
     font-size: 2.3vmax;
-    font-family: "Avenir light";
     margin: 1vmax;
 }
 .link {

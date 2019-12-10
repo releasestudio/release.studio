@@ -50,13 +50,13 @@
 .CreateArticleBox .url{
     grid-area: 3 / 1 / span 1 / span 2;
     font-size: 1.2vmax;
-    font-family: "Avenir light";
+    font-family: 'Nunito', sans-serif;
     font-style: italic;
     height: 2vmax;
 }
 .frText, .enText{
     font-size: 1.4vmax;
-    font-family: "Avenir light";
+    font-family: 'Nunito', sans-serif;
     height: 10vmax;
 }
 
