@@ -13,6 +13,11 @@ export default function NavLarge(props){
         return language === "en" ? "selected" : "unSelected";
     }
 
+    function changeLanguage(lgChoice){
+        setLanguage(lgChoice);
+        localStorage.setItem('ReleaseStudioLanguage', lgChoice)
+    }
+
 
     return (
         <header>
@@ -28,9 +33,9 @@ export default function NavLarge(props){
 
                     <NavLink to="/blogpage">Collaborations</NavLink>
 
-                    <h5 className={frSelected()} onClick={() => setLanguage("fr")}>fr</h5>
+                    <h5 className={frSelected()} onClick={()=> changeLanguage("fr")}>fr</h5>
                     
-                    <h5 className={enSelected()} onClick={() => setLanguage("en")}>en</h5>
+                    <h5 className={enSelected()} onClick={()=> changeLanguage("en")}>en</h5>
 
                 </div>
             </div> 

@@ -6,8 +6,11 @@ export const LanguageContextProvider = ({ children }) => {
     const [language, setLanguage] = useState()
 
     useEffect(()=>{
-        console.log(window.navigator.language.slice(0, 2))
-        if (window.navigator.language.slice(0, 2) === 'fr' && !language){
+      const localStorageLanguage = localStorage.getItem('ReleaseStudioLanguage');
+        if (localStorageLanguage){
+          setLanguage(localStorageLanguage)
+        }
+        else if (window.navigator.language.slice(0, 2) === 'fr' && !language){
           setLanguage('fr')
         }else if(window.navigator.language.slice(0, 2) === 'en' && !language){
           setLanguage('en')

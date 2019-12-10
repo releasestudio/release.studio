@@ -7,11 +7,15 @@ import firebase from '../../firebase';
 function GetFirebaseData() {
     const [existingArticles, setExistingArticles] = useState([]);
 
-    useEffect(() => {
+    useEffect( () => {
+        setExistingArticles([]);
             firebase
             .firestore()
             .collection("articles").orderBy("date", "desc")
             .get().then((snapshot) => {
+                // debugger
+                try{ 
+
                 const articlesData = snapshot.docs.map((doc)=>({
                     'id': doc.id,
                     'frTitle': doc._document.proto.fields.frTitle.stringValue,
@@ -20,8 +24,11 @@ function GetFirebaseData() {
                     'frText': doc._document.proto.fields.frText.stringValue,
                     'enText': doc._document.proto.fields.enText.stringValue,
                 }));
-                // debugger
                 setExistingArticles(articlesData);
+                    
+                }catch{
+                    window.location.reload()
+                };
             });
     }, [])
     return existingArticles; 
@@ -34,11 +41,11 @@ export default function Blog(props){
         const articlesData = GetFirebaseData();
         if(language === "fr"){
             return articlesData.map(article =>{
-                return <Article title={article.frTitle} url={article.url} text={article.frText} />
+                return <Article article={article} title={article.frTitle} url={article.url} text={article.frText} editPage={props.editPage} editArticle={props.editArticle} />
         })}
         else{
             return articlesData.map(article =>{
-                return <Article title={article.enTitle} url={article.url} text={article.enText} />
+                return <Article article={article} title={article.enTitle} url={article.url} text={article.enText} editPage={props.editPage} editArticle={props.editArticle} />
             })
         }
     }

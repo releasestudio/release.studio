@@ -3,30 +3,22 @@
     padding: 1vmax;
     display: grid;
     grid-template: auto auto auto auto /  auto auto;
-    justify-items: center;
-    align-content: center;
     margin: 1.9vw 0;
     width: 90vw;
     box-shadow: 0 0 10px 10px rgba(240, 240, 240, 0.74);
     transition: 0.8s;
 }
 .CreateArticleBox h3{
-    /* border: 1px solid red; */
-    grid-area: 1 / 1 / span 1 / span 1;
     text-transform: uppercase;
     font-family: "Work Sans";
     font-weight: 700; 
     color: black;
     font-size: 2vmax;
     margin: 0 0 1vmax 0;
-    width: 100%;
 }
 
 .CreateArticleBox .ButtonBox{
-    /* border: 1px solid red; */
     text-align: right;
-    grid-area: 1 / 2 / span 1 / span 1;
-    width: 100%;
 }
 
 .CreateArticleBox button{
@@ -42,8 +34,7 @@
 .CreateArticleBox textarea{
     resize: none;
     border: 1px solid gray;
-    margin: 1px;
-    width: 100%;
+    margin: 0.1vmax;
 }
 
 .frTitre, .enTitre{
@@ -59,11 +50,9 @@
     font-size: 1.2vmax;
     font-family: "Avenir light";
     font-style: italic;
-    height: fit-content;
     height: 2vmax;
 }
 .frTexte, .enTexte{
-    height: 10vh;
     font-size: 1.4vmax;
     font-family: "Avenir light";
     height: 10vmax;

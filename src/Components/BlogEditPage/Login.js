@@ -1,12 +1,9 @@
-import React, {useCallback, useContext} from 'react';
-import {withRouter, Redirect} from 'react-router';
+import React, {useCallback, useState} from 'react';
 import firebase from '../../firebase';
-import {UserContext} from '../../UserContext';
 import './Login.css';
 
 export default function Login(){
-    const { currentUser } = useContext(UserContext);
-
+    
     const handleLogin = useCallback(
         async event => {
             event.preventDefault();
@@ -27,14 +24,8 @@ export default function Login(){
             <div className="LoginModule">
                 <h1>Log in</h1>
                 <form onSubmit={handleLogin}>
-                    <label>
-                        Email 
-                        <input name="email" type="email" placeholder="Email" />
-                    </label>
-                    <lable>
-                        Password 
-                        <input name="password" type="password" placeholder="Password" />
-                    </lable>
+                    <input name="email" type="email" placeholder="Email" />
+                    <input name="password" type="password" placeholder="Password" />
                     <button type="submit">Log in</button>
                 </form>
             </div>

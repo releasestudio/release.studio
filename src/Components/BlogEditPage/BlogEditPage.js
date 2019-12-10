@@ -17,6 +17,8 @@ export default function BlogEditPage(props){
     const [frText, setFrText] = useState();
     const [enText, setEnText] = useState();
     const [reload, setReload] = useState(false);
+    const [modify, setModify] = useState(false)
+    const [id, setId] = useState();
 
     function handleFrTitleChange(e){
         setFrTitle(e.target.value);
@@ -54,12 +56,48 @@ export default function BlogEditPage(props){
             alert("Missing a field!")
         }
     }
+
+    function editArticle(article){
+        setModify(true);
+        setId(article.id)
+        setFrTitle(article.frTitle)
+        setEnTitle(article.enTitle)
+        setUrl(article.url)
+        setFrText(article.frText)
+        setEnText(article.enText)
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }
+
+    function modifyDataBase(){
+        if(frTitle && enTitle && url && frText && enText){
+            firebase.firestore().collection('articles').doc(id).update({
+                'frTitle': frTitle,
+                'enTitle': enTitle,
+                'url': url,
+                'frText': frText,
+                'enText': enText,
+            });
+                setFrTitle("")
+                setEnTitle("")
+                setUrl("")
+                setFrText("")
+                setEnText("")
+                setModify(false);
+                setTimeout(setReload(Date.now()), 2000);
+            }else{
+                alert("Missing a field!")
+            }
+    }
     
     function newArticle(){
         if((frTitle || enTitle || url || frText || enText) && (language === "fr")){
-            return <Article style={{ backgroundColor: "rgba(228, 255, 230, 0.473)" }} title={frTitle} url={url} text={frText} />
+            return <Article title={frTitle} url={url} text={frText} create="true" />
         }else if((frTitle || enTitle || url || frText || enText) && (language === "en")){
-            return <Article style={{ backgroundColor: "rgba(228, 255, 230, 0.473)" }} title={enTitle} url={url} text={enText} />
+            return <Article title={enTitle} url={url} text={enText} create="true" />
         }
     }
 
@@ -70,11 +108,11 @@ export default function BlogEditPage(props){
                     <BlogCreateBox frTitle={frTitle} enTitle={enTitle} url={url} frText={frText} enText={enText} 
                     handleFrTitleChange={handleFrTitleChange} handleEnTitleChange={handleEnTitleChange} handleUrlChange={handleUrlChange} 
                     handleFrTextChange={handleFrTextChange} handleEnTextChange={handleEnTextChange} 
-                    saveToDatabase={saveToDatabase} />
+                    saveToDatabase={saveToDatabase} modify={modify} modifyDataBase={modifyDataBase} />
                     
                     {newArticle()}
         
-                    <Blog key={reload} setReload={setReload} />
+                    <Blog key={reload} setReload={setReload} editPage="true" editArticle={editArticle} />
         
                 </div>
             )
