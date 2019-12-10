@@ -87,7 +87,7 @@ export default function BlogEditPage(props){
                 setFrText("")
                 setEnText("")
                 setModify(false);
-                setTimeout(setReload(Date.now()), 2000);
+                setTimeout(setReload(Date.now()), 3000);
             }else{
                 alert("Missing a field!")
             }

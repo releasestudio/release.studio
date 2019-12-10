@@ -14,8 +14,7 @@ function GetFirebaseData() {
             .collection("articles").orderBy("date", "desc")
             .get().then((snapshot) => {
                 // debugger
-                try{ 
-
+                // try{
                 const articlesData = snapshot.docs.map((doc)=>({
                     'id': doc.id,
                     'frTitle': doc._document.proto.fields.frTitle.stringValue,
@@ -26,9 +25,9 @@ function GetFirebaseData() {
                 }));
                 setExistingArticles(articlesData);
                     
-                }catch{
-                    window.location.reload()
-                };
+                // }catch{
+                //     window.location.reload()
+                // };
             });
     }, [])
     return existingArticles; 
@@ -41,11 +40,11 @@ export default function Blog(props){
         const articlesData = GetFirebaseData();
         if(language === "fr"){
             return articlesData.map(article =>{
-                return <Article article={article} title={article.frTitle} url={article.url} text={article.frText} editPage={props.editPage} editArticle={props.editArticle} />
+                return <Article article={article} title={article.frTitle} url={article.url} text={article.frText} editPage={props.editPage} editArticle={props.editArticle} key={article.id} />
         })}
         else{
             return articlesData.map(article =>{
-                return <Article article={article} title={article.enTitle} url={article.url} text={article.enText} editPage={props.editPage} editArticle={props.editArticle} />
+                return <Article article={article} title={article.enTitle} url={article.url} text={article.enText} editPage={props.editPage} editArticle={props.editArticle} key={article.id} />
             })
         }
     }
