@@ -14,6 +14,17 @@ export default function BlogEditPage(props){
 
     const [reloadBlog, setReloadBlog] = useState(false);
 
+    function reload(){
+        setReloadBlog(Date.now());
+        setNewArticle({
+            frTitle: "",
+            enTitle: "",
+            url: "",
+            frText: "",
+            enText: "",
+        })
+    }
+
     function saveToDatabase(){
         if(newArticle.frTitle && newArticle.enTitle && newArticle.url && newArticle.frText && newArticle.enText){
         firebase.firestore().collection('articles').add({
@@ -23,16 +34,7 @@ export default function BlogEditPage(props){
             "url": newArticle.url,
             "frText": newArticle.frText,
             "enText": newArticle.enText
-        }).then(()=>{
-            setReloadBlog(Date.now())
-            setNewArticle({
-                frTitle: "",
-                enTitle: "",
-                url: "",
-                frText: "",
-                enText: "",
-        });
-        })
+        }).then(()=>reload());
         }else{
             alert("Missing a field!")
         }
@@ -46,14 +48,7 @@ export default function BlogEditPage(props){
                 'url': newArticle.url,
                 'frText': newArticle.frText,
                 'enText': newArticle.enText,
-            }).then(()=>setReloadBlog(Date.now()));;
-            setNewArticle({
-                frTitle: "",
-                enTitle: "",
-                url: "",
-                frText: "",
-                enText: "",
-            })
+            }).then(()=>reload());
             }else{
                 alert("Missing a field!")
             }

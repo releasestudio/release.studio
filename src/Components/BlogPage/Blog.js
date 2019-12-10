@@ -15,7 +15,6 @@ export default function Blog(props){
                 .collection("articles").orderBy("date", "desc")
                 .get().then((snapshot) => {
                     // debugger
-                    // try{
                     const articlesData = snapshot.docs.map((doc)=>({
                         'id': doc.id,
                         'frTitle': doc._document.proto.fields.frTitle.stringValue,
@@ -25,10 +24,6 @@ export default function Blog(props){
                         'enText': doc._document.proto.fields.enText.stringValue,
                     }));
                     setExistingArticles(articlesData);
-                        
-                    // }catch{
-                    //     window.location.reload()
-                    // };
                 });
         }, [])
         return existingArticles; 
