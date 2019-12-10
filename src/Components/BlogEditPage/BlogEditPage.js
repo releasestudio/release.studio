@@ -13,7 +13,6 @@ export default function BlogEditPage(props){
     const [newArticle, setNewArticle] = useState({})
 
     const [reloadBlog, setReloadBlog] = useState(false);
-    // const [modify, setModify] = useState(false)
 
     function saveToDatabase(){
         if(newArticle.frTitle && newArticle.enTitle && newArticle.url && newArticle.frText && newArticle.enText){
