@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React,{useState, useContext} from 'react';
 import './Article.css';
 import firebase from '../../firebase';
+import {LanguageContext} from '../../LanguageContext';
 
 export default function Article(props){
     const [visible, setVisible] = useState(true);
+    const {language} = useContext(LanguageContext);
 
     function deleteArticle(e){
         setVisible(false)
@@ -11,19 +13,8 @@ export default function Article(props){
         firebase.firestore().collection("articles").doc(id).delete()
     }
 
-    function showEditDelete(){
-        if (props.editPage){
-       return (
-        <div className="ButtonBox">
-            <button onClick={editArticle}>Edit</button>
-            <button id={props.article.id} onClick={deleteArticle}>Delete</button>
-        </div>
-        )}
-        return (<div className="ButtonBox"></div>);
-    }
-
-    function editArticle(){
-        props.editArticle(props.article)
+    function showEditArticle(){
+        props.showEditArticle(props.article)
     }
 
     function style(){
@@ -34,14 +25,28 @@ export default function Article(props){
         }
     }
 
-
     return (
         <div className="Article" style={style()}>
-            <h3>{props.title}</h3>
-            {showEditDelete()}
-            <iframe title={props.title} className="video" src={props.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3>{language === 'fr' ? props.article.frTitle : props.article.enTitle}</h3>
+
+            {
+            props.editPage ?         
+            <div className="ButtonBox">
+
+                <button onClick={showEditArticle}>Edit</button>
+
+                <button id={props.article.id} onClick={deleteArticle}>Delete</button>
+                
+            </div> :
+            <div className="ButtonBox"></div>
+            }
+
+            <iframe title={props.article.frTitle} className="video" src={props.article.url} SameSite frameBorder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
             <div className="text">
-                <p>{props.text}</p>
+                <p>{language === 'fr' ? props.article.frText : props.article.enText}</p>
             </div>
         </div>
     )

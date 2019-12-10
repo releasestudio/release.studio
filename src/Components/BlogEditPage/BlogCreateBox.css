@@ -39,7 +39,7 @@
     margin: 0.1vmax;
 }
 
-.frTitre, .enTitre{
+.frTitle, .enTitle{
     text-transform: uppercase;
     font-family: "Work Sans";
     font-weight: 700;
@@ -54,7 +54,7 @@
     font-style: italic;
     height: 2vmax;
 }
-.frTexte, .enTexte{
+.frText, .enText{
     font-size: 1.4vmax;
     font-family: "Avenir light";
     height: 10vmax;
@@ -64,19 +64,19 @@
     .CreateArticleBox{
         grid-template: auto auto auto auto auto auto /  auto auto;
     }
-    .CreateArticleBox .frTitre{
+    .CreateArticleBox .frTitle{
         grid-area: 2 / 1 / span 1 / span 2;
     }
-    .CreateArticleBox .enTitre{
+    .CreateArticleBox .enTitle{
         grid-area: 3 / 1 / span 1 / span 2;
     }
     .CreateArticleBox .url{
         grid-area: 4 / 1 / span 1 / span 2;
     }
-    .CreateArticleBox .frTexte{
+    .CreateArticleBox .frText{
         grid-area: 5 / 1 / span 1 / span 2;
     }
-    .CreateArticleBox .enTexte{
+    .CreateArticleBox .enText{
         grid-area: 6 / 1 / span 1 / span 2;
     }
 }

@@ -3,29 +3,46 @@ import './BlogCreateBox.css';
 import firebase from '../../firebase';
 
 export default function BlogCreateBox(props){
-    function logOut(){
-        firebase.auth().signOut();
-    }
 
-    function newOrModify(){
-        if(props.modify){
-            return <button onClick={props.modifyDataBase}>Enregistrer</button>
-        }
-        return <button onClick={props.saveToDatabase}>Enregistrer</button>
+    function handleChange(key, value){
+        switch (key) {
+            case 'frTitle':
+                props.setNewArticle({...props.newArticle, frTitle: value});
+                break;
+            case 'enTitle':
+                props.setNewArticle({...props.newArticle, enTitle: value});
+                break;
+            case 'url':
+                props.setNewArticle({...props.newArticle, url: value});
+                break;
+            case 'frText':
+                props.setNewArticle({...props.newArticle, frText: value});
+                break;
+            case 'enText':
+                props.setNewArticle({...props.newArticle, enText: value});
+                break;
+            default:
+                console.log('Invalid item');
+                break;
+          }    
     }
-
     return (
             <div className="CreateArticleBox">
                 <h3>{props.modify? 'Edit' : 'Create'} Article</h3>
                 <div className="ButtonBox">
-                    {newOrModify()}
-                    <button onClick={logOut}>Log out</button>
+                    {
+                        props.modify?
+                        <button onClick={props.modifyDataBase}>Enregistrer</button>
+                        :
+                        <button onClick={props.saveToDatabase}>Enregistrer</button>
+                    }
+                    <button onClick={() => firebase.auth().signOut()}>Log out</button>
                 </div>
-                <textarea onChange={props.handleFrTitleChange} value={props.frTitle} type="text" name="setFrTitre" className="frTitre" placeholder="Titre Francais"/>
-                <textarea onChange={props.handleEnTitleChange} value={props.enTitle} type="text" name="setEnTitre" className="enTitre" placeholder="English Title"/>
-                <textarea onChange={props.handleUrlChange} value={props.url} type="text" name="setUrl" className="url" placeholder="Embeded url" />
-                <textarea onChange={props.handleFrTextChange} value={props.frText} type="setText" name="frTexte" className="frTexte" placeholder="Texte Français" />
-                <textarea onChange={props.handleEnTextChange} value={props.enText} type="setext" name="enTexte" className="enTexte" placeholder="English Text" />
+                <textarea onChange={(e)=> handleChange(e.target.className, e.target.value)} value={props.newArticle.frTitle} type="text" className="frTitle" placeholder="Titre Francais"/>
+                <textarea onChange={(e)=> handleChange(e.target.className, e.target.value)} value={props.newArticle.enTitle} type="text" className="enTitle" placeholder="English Title"/>
+                <textarea onChange={(e)=> handleChange(e.target.className, e.target.value)} value={props.newArticle.url} type="text" className="url" placeholder="Embeded url" />
+                <textarea onChange={(e)=> handleChange(e.target.className, e.target.value)} value={props.newArticle.frText} type="setText" className="frText" placeholder="Texte Français" />
+                <textarea onChange={(e)=> handleChange(e.target.className, e.target.value)} value={props.newArticle.enText} type="setext" className="enText" placeholder="English Text" />
             </div>
     );
 
