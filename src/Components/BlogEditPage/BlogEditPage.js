@@ -23,15 +23,16 @@ export default function BlogEditPage(props){
             "url": newArticle.url,
             "frText": newArticle.frText,
             "enText": newArticle.enText
+        }).then(()=>{
+            setReloadBlog(Date.now())
+            setNewArticle({
+                frTitle: "",
+                enTitle: "",
+                url: "",
+                frText: "",
+                enText: "",
         });
-        setNewArticle({
-            frTitle: "",
-            enTitle: "",
-            url: "",
-            frText: "",
-            enText: "",
         })
-        // setReloadBlog(Date.now());
         }else{
             alert("Missing a field!")
         }
@@ -45,7 +46,7 @@ export default function BlogEditPage(props){
                 'url': newArticle.url,
                 'frText': newArticle.frText,
                 'enText': newArticle.enText,
-            });
+            }).then(()=>setReloadBlog(Date.now()));;
             setNewArticle({
                 frTitle: "",
                 enTitle: "",
@@ -53,7 +54,6 @@ export default function BlogEditPage(props){
                 frText: "",
                 enText: "",
             })
-            // setReloadBlog(Date.now());
             }else{
                 alert("Missing a field!")
             }
