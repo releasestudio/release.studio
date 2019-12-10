@@ -57,6 +57,8 @@
 
 .Article button{
     margin-left: 3vw;
+    background-color: white;
+    border: 1px solid grey;
     text-justify: center;
     width: 9vmax;
     height: 2.1vmax;

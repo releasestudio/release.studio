@@ -32,6 +32,11 @@
     font-size: 2vmax;
     margin: 0.5vmax auto;
 }
+.LoginModule .error{
+    color: red;
+    margin: 0;
+    padding: 0;
+}
 
 .LoginModule form {
     /* border: 1px solid red; */
@@ -53,6 +58,8 @@
 
 .LoginModule button {
     /* border: 1px solid red; */
+    background-color: white;
+    border: 1px solid grey;
     box-shadow: 0 0 3px rgb(219, 219, 219);
     font-size: 2vmax;
     width: 9vmax;

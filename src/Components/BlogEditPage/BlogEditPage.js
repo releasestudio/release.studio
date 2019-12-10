@@ -51,7 +51,7 @@ export default function BlogEditPage(props){
         setUrl("");
         setFrText("");
         setEnText("");
-        setReload(reload + 1);
+        // setReload(reload + 1);
         }else{
             alert("Missing a field!")
         }
@@ -87,7 +87,7 @@ export default function BlogEditPage(props){
                 setFrText("")
                 setEnText("")
                 setModify(false);
-                setTimeout(setReload(Date.now()), 3000);
+                // setTimeout(setReload(Date.now()), 3000);
             }else{
                 alert("Missing a field!")
             }
