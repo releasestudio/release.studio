@@ -80,7 +80,7 @@ export default function BlogEditPage(props){
     return (
         <div>
             {
-                currentUser ?
+                firebase.auth().currentUser ?
                 <div className="BlogEditPage">
                     <BlogCreateBox newArticle={newArticle} setNewArticle={setNewArticle}
                     saveToDatabase={saveToDatabase} modify={newArticle.articleEdit} modifyDataBase={modifyDataBase}/>
