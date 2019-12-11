@@ -5,8 +5,7 @@ export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
     const [language, setLanguage] = useState()
-    const [currentUser, setCurrentUser] = useState(null);
-
+    // language pref
     useEffect(()=>{
       const localStorageLanguage = localStorage.getItem('ReleaseStudioLanguage');
         if (localStorageLanguage){
@@ -20,8 +19,18 @@ export const ContextProvider = ({ children }) => {
       }, [language]
     )
 
+
+
+    // firebase login
+    const [currentUser, setCurrentUser] = useState(localStorage.FirebaseUser);
+
+
     useEffect(()=> {
-      firebase.auth().onAuthStateChanged(setCurrentUser);
+        firebase.auth().onAuthStateChanged((user)=>{
+          localStorage.setItem('FirebaseUser', user)
+          setCurrentUser(user)
+      })
+      return localStorage.getItem(null)
   }, []);
 
 
