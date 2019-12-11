@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import {NavLink} from "react-router-dom";
 import './NavLarge.css';
-import {LanguageContext} from '../../LanguageContext';
+import {LanguageContext} from '../../Context';
 
 export default function NavLarge(props){
     const {language, setLanguage} = useContext(LanguageContext);

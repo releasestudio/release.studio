@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import {NavLink} from "react-router-dom";
 import './NavNarrow.css';
-import {LanguageContext} from '../../LanguageContext';
+import {LanguageContext} from '../../Context';
 
 export default function NavNarrow(props){
     const {language, setLanguage} = useContext(LanguageContext);

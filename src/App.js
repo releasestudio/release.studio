@@ -7,8 +7,8 @@ import BlogEditPage from './Components/BlogEditPage/BlogEditPage'
 import Home from './Components/Home/Home';
 import Lionwood from './Components/Lionwood/Lionwood';
 import BlogPage from './Components/BlogPage/BlogPage.js';
-import {LanguageContextProvider} from './LanguageContext';
-import {UserContextProvider} from './UserContext';
+import {LanguageContextProvider, UserContextProvider} from './Context';
+// import {UserContextProvider} from './UserContext';
 
 export default function App(props){
     const [windowWidth, setWindowWidth] = useState (window.innerWidth);

@@ -1,7 +1,7 @@
 import React,{useState, useContext} from 'react';
 import './Article.css';
 import firebase from '../../firebase';
-import {LanguageContext} from '../../LanguageContext';
+import {LanguageContext} from '../../Context';
 
 export default function Article(props){
     const [visible, setVisible] = useState(true);

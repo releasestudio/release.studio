@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './Contact.css';
-import {LanguageContext}from '../../../LanguageContext';
+import {LanguageContext}from '../../../Context';
 
 export default function Contact(props){
     const {language} = useContext(LanguageContext);

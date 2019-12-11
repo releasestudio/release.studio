@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './Lionwood.css';
-import {LanguageContext} from '../../LanguageContext';
+import {LanguageContext} from '../../Context';
 
 export default function Lionwood(props){
     const {language} = useContext(LanguageContext);

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './HomeBanner.css';
-import {LanguageContext} from '../../../LanguageContext';
+import {LanguageContext} from '../../../Context';
 
 export default function HomeBanner(props) {
     const {language} = useContext(LanguageContext);
