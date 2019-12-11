@@ -33,9 +33,9 @@ export default function BlogCreateBox(props){
                 <div className="ButtonBox">
                     {
                         props.modify?
-                        <button onClick={props.modifyDataBase}>Enregistrer</button>
+                        <button onClick={props.modifyDataBase}>Save</button>
                         :
-                        <button onClick={props.saveToDatabase}>Enregistrer</button>
+                        <button onClick={props.saveToDatabase}>Save</button>
                     }
                     <button onClick={() => firebase.auth().signOut()}>Log out</button>
                 </div>
