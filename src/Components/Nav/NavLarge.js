@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import {NavLink} from "react-router-dom";
 import './NavLarge.css';
-import {LanguageContext} from '../../Context';
+import {Context} from '../../Context';
 
 export default function NavLarge(props){
-    const {language, setLanguage} = useContext(LanguageContext);
+    const {language, setLanguage} = useContext(Context);
 
     function frSelected(){
         return language === "fr" ? "selected" : "unSelected";

@@ -1,10 +1,11 @@
 import React, { createContext, useState, useEffect } from 'react';
 import firebase from './firebase'
 
-export const LanguageContext = createContext();
+export const Context = createContext();
 
-export const LanguageContextProvider = ({ children }) => {
+export const ContextProvider = ({ children }) => {
     const [language, setLanguage] = useState()
+    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(()=>{
       const localStorageLanguage = localStorage.getItem('ReleaseStudioLanguage');
@@ -16,26 +17,17 @@ export const LanguageContextProvider = ({ children }) => {
         }else if(window.navigator.language.slice(0, 2) === 'en' && !language){
           setLanguage('en')
         }
-      }, [language])
-
-    return (
-        <LanguageContext.Provider value={{ language, setLanguage }} >
-            {children}
-        </LanguageContext.Provider>
+      }, [language]
     )
-} 
-export const UserContext = createContext();
-
-export function UserContextProvider (props) {
-    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(()=> {
-        firebase.auth().onAuthStateChanged(setCurrentUser);
-    }, []);
+      firebase.auth().onAuthStateChanged(setCurrentUser);
+  }, []);
+
 
     return (
-        <UserContext.Provider value={{ currentUser }} >
-            {props.children}
-        </UserContext.Provider>
+        <Context.Provider value={{ language, setLanguage, currentUser }} >
+            {children}
+        </Context.Provider>
     )
-}
+} 

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import './Lionwood.css';
-import {LanguageContext} from '../../Context';
+import {Context} from '../../Context';
 
 export default function Lionwood(props){
-    const {language} = useContext(LanguageContext);
+    const {language} = useContext(Context);
 
     function renderBlog(){
         if(language === "fr"){

@@ -7,8 +7,7 @@ import BlogEditPage from './Components/BlogEditPage/BlogEditPage'
 import Home from './Components/Home/Home';
 import Lionwood from './Components/Lionwood/Lionwood';
 import BlogPage from './Components/BlogPage/BlogPage.js';
-import {LanguageContextProvider, UserContextProvider} from './Context';
-// import {UserContextProvider} from './UserContext';
+import {ContextProvider} from './Context';
 
 export default function App(props){
     const [windowWidth, setWindowWidth] = useState (window.innerWidth);
@@ -29,8 +28,7 @@ export default function App(props){
     return (
       <div className="App">
           <BrowserRouter>
-            <UserContextProvider>
-              <LanguageContextProvider>
+            <ContextProvider>
                 {headerForWidth()}
                 <Switch>
                   <Route path="/" component={Home} exact />
@@ -38,8 +36,7 @@ export default function App(props){
                   <Route path="/blogpage" component={BlogPage} />
                   <Route path="/blogeditpage" component={BlogEditPage} />
                 </Switch>
-              </LanguageContextProvider>
-            </UserContextProvider>
+            </ContextProvider>
           </BrowserRouter>
         
       </div>

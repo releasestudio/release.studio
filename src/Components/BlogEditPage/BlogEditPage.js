@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './BlogEditPage.css';
 import firebase from '../../firebase';
 import Article from '../BlogPage/Article';
 import Blog from '../BlogPage/Blog';
 import BlogCreateBox from './BlogCreateBox';
 import Login from './Login'
+import { Context } from "../../Context";
 
 export default function BlogEditPage(props){
+    const {currentUser} = useContext(Context)
 
     const [newArticle, setNewArticle] = useState({})
 
@@ -72,7 +74,7 @@ export default function BlogEditPage(props){
     return (
         <div>
             {
-                firebase.auth().currentUser ?
+                currentUser ?
                 <div className="BlogEditPage">
                     <BlogCreateBox newArticle={newArticle} setNewArticle={setNewArticle}
                     saveToDatabase={saveToDatabase} modify={newArticle.articleEdit} modifyDataBase={modifyDataBase}/>

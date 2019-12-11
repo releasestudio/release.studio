@@ -1,11 +1,11 @@
 import React,{useState, useContext} from 'react';
 import './Article.css';
 import firebase from '../../firebase';
-import {LanguageContext} from '../../Context';
+import {Context} from '../../Context';
 
 export default function Article(props){
     const [visible, setVisible] = useState(true);
-    const {language} = useContext(LanguageContext);
+    const {language} = useContext(Context);
 
     function deleteArticle(e){
         setVisible(false)
