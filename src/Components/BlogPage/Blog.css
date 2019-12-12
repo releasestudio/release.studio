@@ -5,3 +5,43 @@
     justify-items: center;
     width: 100%;
 }
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin:0;
+}
+
+.loader1,
+.loader2,
+.loader3 {
+    display: grid;
+    grid-template: auto auto / auto auto;
+    align-self: center;
+    width: 90vw;
+    height: 27vh;
+    padding: 1vmax;
+    margin: 1.9vw 0; 
+    animation: load7 0.7s infinite ease-in-out;
+}
+.loader2 {
+    animation-delay: 0.33s;
+}
+.loader3 {
+    animation-delay: 0.63s;
+}
+
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 10px 10px rgba(240, 240, 240, 0.74);
+    background-color: rgb(255, 255, 255);
+  }
+  40% {
+    box-shadow: 0 0 10px 10px rgba(226, 226, 226, 0.534);
+    background-color: rgb(247, 247, 247);
+  }
+}

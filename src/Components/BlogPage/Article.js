@@ -42,7 +42,7 @@ export default function Article(props){
             <div className="ButtonBox"></div>
             }
 
-            <iframe title={props.article.frTitle} className="video" src={props.article.url} SameSite frameBorder="0" 
+            <iframe title={props.article.frTitle} className="video" src={props.article.url} samesite="false" frameBorder="0" 
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
             <div className="text">
