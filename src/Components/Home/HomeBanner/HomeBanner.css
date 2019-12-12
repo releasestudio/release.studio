@@ -19,20 +19,13 @@ video{
 }
 .textoverlay h3 {
     text-transform: uppercase;
-    font-family: "Work Sans";
-    font-weight: 700; 
     color: white;
-    text-justify: center;
     text-align: center;
     font-size: 3.2vmax;
 }
-.textoverlay h4 {
-    text-justify: center;
+.textoverlay p {
     text-align: center;
-    color: rgb(0, 0, 0);
     text-shadow: 0 0 40px rgb(168, 168, 168);
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
     font-size: 2.3vmax;
     margin: 1vmax;
 }

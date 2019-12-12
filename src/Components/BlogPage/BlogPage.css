@@ -3,17 +3,29 @@
     width: 100%;
 }
 .footer{
-    margin-top: 1.7vmax;
     background-color: rgb(243, 243, 243);
-    height: 3vh;
     text-align: center;
     text-justify: center;
-    margin: 0;
+    margin: 1.7vmax 0 0 0;
+    padding: 1vmax 0;
 }
 .footer a{
-    cursor: default;
-    color: black;
     display: inline-block;
-    font-size: 0.8vmax;
-    margin: auto;
+    font-size: 1vmax;
+    padding: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .footer{
+        background-color: rgb(243, 243, 243);
+        text-align: center;
+        text-justify: center;
+        margin: 1.7vmax 0 0 0;
+        padding: 0vmax 0;
+    }
+    .footer a{
+        font-size: 1.6vmax;
+        padding: 0.8vh 0 1vh 0;
+        margin: 0;
+    }
 }

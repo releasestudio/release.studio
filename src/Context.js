@@ -4,8 +4,9 @@ import firebase from './firebase'
 export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
-    const [language, setLanguage] = useState()
+
     // language pref
+    const [language, setLanguage] = useState()
     useEffect(()=>{
       const localStorageLanguage = localStorage.getItem('ReleaseStudioLanguage');
         if (localStorageLanguage){
@@ -30,7 +31,7 @@ export const ContextProvider = ({ children }) => {
           localStorage.setItem('FirebaseUser', user)
           setCurrentUser(user)
       })
-      return localStorage.getItem(null)
+      return localStorage.setItem('FirebaseUser', null)
   }, []);
 
 

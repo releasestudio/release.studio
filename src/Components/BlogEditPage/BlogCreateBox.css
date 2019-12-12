@@ -10,7 +10,7 @@
 }
 .CreateArticleBox h3{
     text-transform: uppercase;
-    font-family: "Work Sans";
+    font-family: "Avenir Next";
     font-weight: 700; 
     color: black;
     font-size: 2vmax;
@@ -21,18 +21,6 @@
     text-align: right;
 }
 
-.CreateArticleBox button{
-    background-color: white;
-    border: 1px solid grey;
-    margin-left: 3vw;
-    text-justify: center;
-    width: 9vmax;
-    height: 2.1vmax;
-    border-radius: 2vmax;
-    font-family: "Work Sans";
-    font-size: 1.3vmax;
-}
-
 .CreateArticleBox textarea{
     resize: none;
     border: 1px solid gray;
@@ -41,7 +29,7 @@
 
 .frTitle, .enTitle{
     text-transform: uppercase;
-    font-family: "Work Sans";
+    font-family: "Avenir Next";
     font-weight: 700;
     font-size: 2vmax;
     height: 3vmax;
@@ -50,13 +38,13 @@
 .CreateArticleBox .url{
     grid-area: 3 / 1 / span 1 / span 2;
     font-size: 1.2vmax;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Avenir', sans-serif;
     font-style: italic;
     height: 2vmax;
 }
 .frText, .enText{
     font-size: 1.4vmax;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Avenir', sans-serif;
     height: 10vmax;
 }
 

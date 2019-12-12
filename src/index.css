@@ -1,13 +1,67 @@
+@font-face {
+  font-family: "Avenir";
+  src: url('./utils/Fonts/Avenir.ttc') format('truetype');
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url('./utils/Fonts/Avenir Next.ttc') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 300;
+  font-size: 1.7vmax;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  /* border: 1px solid red; */
+  background-color: white;
+  border: 1px solid grey;
+  box-shadow: 0 0 3px rgb(219, 219, 219);
+  width: 9vmax;
+  height: 2.1vmax;
+  border-radius: 2vmax;
+  font-family: "Avenir";
+  font-size: 1.3vmax;
+  margin-left: 3vw;
+  text-justify: center;
+  align-self: center;
+}
+
+p {
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: "Avenir Next";
+  font-weight: 700; 
+  font-size: 2vmax;
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 300;
+  font-size: 1.5vmax;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 5px 1vmax;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: rgb(78, 78, 78);
+  transition: 0.3s;
 }

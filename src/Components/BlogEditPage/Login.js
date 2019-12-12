@@ -27,7 +27,7 @@ export default function Login(){
     return (
         <div className="LoginPage">
             <div className="LoginModule">
-                <h1>Log in</h1>
+                <h3>Log in</h3>
                 {error && <p className="error">{error}</p>}
                 <form onSubmit={handleLogin}>
                     <input name="email" type="email" placeholder="Email" />

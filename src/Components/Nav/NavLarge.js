@@ -32,9 +32,9 @@ export default function NavLarge(props){
 
                     <NavLink to="/blogpage">Collaborations</NavLink>
 
-                    <h5 className={frSelected()} onClick={()=> changeLanguage("fr")}>fr</h5>
+                    <p className={frSelected()} onClick={()=> changeLanguage("fr")}>fr</p>
                     
-                    <h5 className={enSelected()} onClick={()=> changeLanguage("en")}>en</h5>
+                    <p className={enSelected()} onClick={()=> changeLanguage("en")}>en</p>
 
                 </div>
             </div> 

@@ -10,14 +10,14 @@ export default function HomeBanner(props) {
             return (
             <div className="textoverlay">
                 <h3>Composition musicale<br/>et identité sonore</h3>
-                <h4>La création sonore au service de votre image.</h4>
+                <p>La création sonore au service de votre image.</p>
             </div>
             )
         }else{
             return (
             <div className="textoverlay">
             <h3>Music Composition <br/>and Sonic Branding</h3>
-            <h4>Custum sound for your custum stories</h4>
+            <p>Custum sound for your custum stories</p>
         </div>
         )
         }

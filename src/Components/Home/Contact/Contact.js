@@ -8,11 +8,11 @@ export default function Contact(props){
     function textContact(){
         if(language === "fr"){
             return (
-                <h6>COORDONNÉES</h6>
+                <p>COORDONNÉES</p>
             )
         }else{
             return (
-                <h6>CONTACT</h6>
+                <p>CONTACT</p>
         )
         }
     }

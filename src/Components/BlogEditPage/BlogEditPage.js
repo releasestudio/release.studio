@@ -14,6 +14,8 @@ export default function BlogEditPage(props){
 
     const [reloadBlog, setReloadBlog] = useState(false);
 
+    const [showAlert, setShowAlert] = useState("hidePopup")
+
     function reload(){
         setReloadBlog(Date.now());
         setNewArticle({
@@ -36,7 +38,7 @@ export default function BlogEditPage(props){
             "enText": newArticle.enText
         }).then(()=>reload());
         }else{
-            alert("Missing a field!")
+            setShowAlert("showPopup")
         }
     }
 
@@ -50,7 +52,7 @@ export default function BlogEditPage(props){
                 'enText': newArticle.enText,
             }).then(()=>reload());
             }else{
-                alert("Missing a field!")
+                setShowAlert("showPopup")
             }
     }
 
@@ -70,12 +72,18 @@ export default function BlogEditPage(props){
             behavior: 'smooth'
           });
     }
-
+    function showPopup(){
+        setShowAlert("hidePopup")
+    }
     return (
         <div>
             {
                 currentUser ?
                 <div className="BlogEditPage">
+                    <div className={showAlert}>
+                        <h3>Missing a field!</h3>
+                        <button className="ok" onClick={showPopup}>OK</button>
+                    </div>
                     <BlogCreateBox newArticle={newArticle} setNewArticle={setNewArticle}
                     saveToDatabase={saveToDatabase} modify={newArticle.articleEdit} modifyDataBase={modifyDataBase}/>
                     
