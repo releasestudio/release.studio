@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Avenir";
-  src: url('./utils/Fonts/Avenir.ttc') format('truetype');
+  src: url('./utils/Fonts/Avenir.ttf') format('truetype');
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("./utils/Fonts/Avenir-Next.ttc") format('truetype');
+  src: url("./utils/Fonts/Avenir-Next.ttf") format('truetype');
 }
 
 body {
