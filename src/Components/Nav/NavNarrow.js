@@ -35,7 +35,7 @@ export default function NavNarrow(props){
 
                     <NavLink to="/blogpage">Collaborations</NavLink>
 
-                    <h5 onClick={() => toggleLanguage()}>{showOtherLanguage()}</h5>
+                    <p onClick={() => toggleLanguage()}>{showOtherLanguage()}</p>
 
                 </div>
             </div> 
