@@ -32,6 +32,7 @@
     display: inline-block;
     font-size: 1.4vmax;
     font-weight: bold;
+    min-width: 15px;
 }
 
 .narrowNav p:hover{
