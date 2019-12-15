@@ -33,7 +33,7 @@ export default function App(props){
                 <Switch>
                   <Route path="/" component={Home} exact />
                   <Route path="/lionwood" component={Lionwood} />
-                  <Route path="/blogpage" component={BlogPage} />
+                  <Route path="/Showreel" component={BlogPage} />
                   <Route path="/blogeditpage" component={BlogEditPage} />
                 </Switch>
             </ContextProvider>
