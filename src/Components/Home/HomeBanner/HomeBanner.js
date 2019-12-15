@@ -16,8 +16,8 @@ export default function HomeBanner(props) {
         }else{
             return (
             <div className="textoverlay">
-            <h3>Music Composition <br/>and Sonic Branding</h3>
-            <p>Custum sound for your custum stories</p>
+            <h3>Music Composition <br/>and sound identity</h3>
+            <p>Bespoke sound in your image</p>
         </div>
         )
         }

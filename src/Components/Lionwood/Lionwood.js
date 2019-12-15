@@ -23,7 +23,9 @@ export default function Lionwood(props){
                 <div className="text">
                     
                     <p>
-                        Descover the music composer behind the sound of Release Studio.
+                    Discover the composer behind the sound of Release Studio.
+                    His music interweaves boldness, sensitivity and strength.
+                    Subtle, atmospheric textures draw the listener on a journey that is as grandiose as it is intimate.  
                     </p>
 
                 </div>
