@@ -24,8 +24,8 @@ export default function Lionwood(props){
                     
                     <p>
                     Discover the composer behind the sound of Release Studio.
-                    His music interweaves boldness, sensitivity and strength.
-                    Subtle, atmospheric textures draw the listener on a journey that is as grandiose as it is intimate.  
+                    <br/>His music interweaves boldness, sensitivity and strength.
+                    <br/>Subtle, atmospheric textures draw the listener on a journey that is as grandiose as it is intimate.  
                     </p>
 
                 </div>
