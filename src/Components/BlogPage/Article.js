@@ -43,7 +43,7 @@ export default function Article(props){
             }
 
             <iframe title={props.article.frTitle} className="video" src={props.article.url} samesite="false" frameBorder="0" 
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" webkitallowfullscreen allowfullscreen="allowfullscreen"></iframe>
 
             <div className="text">
                 <p>{language === 'fr' ? props.article.frText : props.article.enText}</p>

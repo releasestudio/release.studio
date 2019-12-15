@@ -30,7 +30,7 @@ export default function NavLarge(props){
 
                     <NavLink to="/Lionwood">Lionwood</NavLink>
 
-                    <NavLink to="/blogpage">Collaborations</NavLink>
+                    <NavLink to="/blogpage">{language === 'fr'?"Collaborations": "Show reel"}</NavLink>
 
                     <p className={frSelected()} onClick={()=> changeLanguage("fr")}>fr</p>
                     

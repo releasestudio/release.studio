@@ -33,7 +33,7 @@ export default function NavNarrow(props){
 
                     <NavLink to="/Lionwood">Lionwood</NavLink>
 
-                    <NavLink to="/blogpage">Collaborations</NavLink>
+                    <NavLink to="/blogpage">{language === 'fr'?"Collaborations": "Show reel"}</NavLink>
 
                     <p onClick={() => toggleLanguage()}>{showOtherLanguage()}</p>
 
