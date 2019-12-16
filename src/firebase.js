@@ -14,6 +14,25 @@ var firebaseConfig = {
     measurementId: "G-11CMYQ1VFZ"
 };
 
+export function getArticles() {
+    return firebase
+    .firestore()
+    .collection("articles").orderBy("date", "desc")
+    .get().then((snapshot) => {
+        // debugger
+        const articlesData = snapshot.docs.map((doc)=>({
+            'id': doc.id,
+            'frTitle': doc._document.proto.fields.frTitle.stringValue,
+            'enTitle': doc._document.proto.fields.enTitle.stringValue,
+            'url': doc._document.proto.fields.url.stringValue,
+            'frText': doc._document.proto.fields.frText.stringValue,
+            'enText': doc._document.proto.fields.enText.stringValue,
+        }));
+        localStorage.setItem('articlesData', JSON.stringify(articlesData))
+        return articlesData
+    });
+}
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 // firebase.analytics();

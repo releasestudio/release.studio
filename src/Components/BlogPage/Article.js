@@ -1,6 +1,6 @@
 import React,{useState, useContext} from 'react';
 import './Article.css';
-import firebase from '../../firebase';
+import firebase, {getArticles} from '../../firebase';
 import {Context} from '../../Context';
 
 export default function Article(props){
@@ -10,23 +10,25 @@ export default function Article(props){
     function deleteArticle(e){
         setVisible(false)
         let id = e.target.id;
-        firebase.firestore().collection("articles").doc(id).delete()
+        firebase.firestore().collection("articles").doc(id).delete();
+        getArticles();
+
     }
 
     function showEditArticle(){
         props.showEditArticle(props.article)
     }
 
-    function style(){
+    function cssStyle(){
         if(!visible){
-            return style={display: "none"};
+            return {display: "none"};
         }else if(props.create){
-            return style={ backgroundColor: "rgba(228, 255, 230, 0.473)" }
+            return { backgroundColor: "rgba(228, 255, 230, 0.473)" };
         }
     }
 
     return (
-        <div className="Article" style={style()}>
+        <div className="Article" style={cssStyle()}>
 
             <h3>{language === 'fr' ? props.article.frTitle : props.article.enTitle}</h3>
 
